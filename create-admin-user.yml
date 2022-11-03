@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Create an admin user with sudo privileges
+    ansible.builtin.user:
+      name: user
+      groups: sudo
+      append: yes

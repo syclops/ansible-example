@@ -1,0 +1,8 @@
+---
+- name: Install useful packages
+  become: yes
+  ansible.builtin.apt:
+    force_apt_get: yes
+    name:
+      - gcc
+    state: latest

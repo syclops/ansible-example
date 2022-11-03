@@ -1,0 +1,10 @@
+---
+- name: Install Python and related packages
+  become: yes
+  ansible.builtin.apt:
+    force_apt_get: yes
+    name:
+      - python3
+      - python3-numpy
+      - python3-pandas
+    state: latest
